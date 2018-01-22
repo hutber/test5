@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "transform-react-stateless-component-name",
+    "transform-react-require", [
+      "module-resolver", {
+        "root": ["./src"],
+        "alias": {
+          "components": "./src/components",
+          "configuration": "./configuration",
+          "state": "./src/state",
+          "test": "./src/test",
+          "utils": "./src/utils"
+        }
+      }
+    ],
+    "transform-class-properties",
+    "dynamic-import-node",
+    "react-hot-loader/babel"
+  ],
+  "presets": [
+    "env",
+    "stage-0",
+    "react"
+  ]
+}
