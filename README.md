@@ -11,6 +11,16 @@ Very simply the test showing where I am currently.
 
 ## Notes
 
+**[EDIT]**
+
+I've spent just  little over 2 more hours on this and hooked in the basket along with a very basket menu, no responsiveness has been added, but this is just a simple case of add `media queries` into the styles. 
+
+I also briefly wanted to implement tests before I started working on it again, but since introducing post css variables I still need to work out why it doesn't allow the `@`. I imagine its a setting or a custom transform I'll need to add to jest's config in the package.json
+
+Hopefully this is enough to get me an interview with yourselves as a tiny bit of logic has been added for the checkout.
+
+**[Previous]**
+
 I have to admit, I am slightly embarrassed to send this over, not only is the quality of code not terrible well thought out, nor with any refectoring. Its current has zero tests or lints
 
 My plans would normally but, to use jest and snapsnots to for each component and most likely expect for unit testing the reducers
