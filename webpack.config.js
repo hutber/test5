@@ -56,10 +56,6 @@ module.exports = {
 				use: ['babel-loader']
 			},
 			{
-				test: /\.(jpg|png)$/,
-				loader: 'url?limit=25000'
-			},
-			{
 				test: /\.css$/,
 				use: [
 					'style-loader',
@@ -74,12 +70,7 @@ module.exports = {
 					},
 					'postcss-loader?sourceMap&parser=postcss-scss'
 				],
-			},
-			// Font Definitions
-			{ test: /\.woff$/, loader: 'url?limit=65000&mimetype=application/font-woff&name=./font/[name].[ext]' },
-			{ test: /\.woff2$/, loader: 'url?limit=65000&mimetype=application/font-woff2&name=./font/[name].[ext]' },
-			{ test: /\.[ot]tf$/, loader: 'url?limit=65000&mimetype=application/octet-stream&name=./font/[name].[ext]' },
-			{ test: /\.eot$/, loader: 'url?limit=65000&mimetype=application/vnd.ms-fontobject&name=./font/[name].[ext]' }
+			}
 		]
 	},
 	cache: true
