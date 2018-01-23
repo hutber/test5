@@ -1,0 +1,57 @@
+@import "../vars.css";
+
+$basket_width: 50px;
+$basket_margin: 10px;
+
+.clothingItem {
+  width: 90vw;
+  margin: 0 auto 40px auto;
+  position: relative;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  &__productDetails {
+    width: calc(100% - $basket_width - $basket_margin);
+    text-align: right;
+    display: inline-block;
+  }
+
+  &__details {
+    display: flex;
+    align-items: stretch;
+    justify-content: right;
+  }
+
+  &__code {
+    color: #bebebe;
+    padding-left: 5px;
+  }
+
+  &__price {
+    color: $altMain;
+  }
+
+  &__basket {
+    position: relative;
+    background: $textColour;
+    color: $wtext;
+    width: $basket_width;
+    display: inline-block;
+    margin-left: $basket_margin;
+    cursor: pointer;
+    top: 0;
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover {
+      color: #DDD;
+    }
+  }
+}
+
