@@ -1,0 +1,38 @@
+@import "../shared/vars.css";
+
+.menu {
+  background: #322e31;
+  color: $wtext;
+  width: 80vw;
+  max-width: 400px;
+  position: fixed;
+  right: -80vw;
+  top: 0;
+  height: 100vh;
+  z-index: 3;
+
+  h2,h3 {
+    font-size: 16px;
+    display: inline-block;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+
+.menuOpen {
+  right: 0;
+}
+
+.nav {
+  position: relative;
+  height: $navHeight;
+  line-height: 47px;
+}
+
+.menuContent {
+  text-align: center;
+}

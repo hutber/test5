@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 
 //Components
 import Header from '../Header';
+import Menu from '../Menu';
 import ShopContent from '../ShopContent';
 
 export default class Home extends React.Component {
@@ -18,6 +19,7 @@ export default class Home extends React.Component {
 		return (
 			<div>
 				<Header />
+				<Menu />
 				<ShopContent />
 			</div>
 		);

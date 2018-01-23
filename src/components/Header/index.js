@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux'
-import Basket from './Basket'
+import Basket from '../shared/Basket'
 
 //Styles
 import style from './style.css';

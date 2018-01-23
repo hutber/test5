@@ -1,0 +1,37 @@
+@import "../vars.css";
+.basket {
+  height: $navHeight;
+  position: absolute;
+  color: $wtext;
+  width: $basket_width;
+  display: inline-block;
+  margin-left: $basket_margin;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    color: #DDD;
+  }
+}
+
+
+.number {
+  position: absolute;
+  font-size: 11px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  display: block;
+  top: 24px;
+  right: 5px;
+  border-radius: 60px;
+  background: red;
+  color: #fff;
+}

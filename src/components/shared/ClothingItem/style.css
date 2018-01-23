@@ -1,8 +1,5 @@
 @import "../vars.css";
 
-$basket_width: 50px;
-$basket_margin: 10px;
-
 .clothingItem {
   width: 90vw;
   margin: 0 auto 40px auto;

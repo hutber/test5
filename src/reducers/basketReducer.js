@@ -1,19 +1,17 @@
 import {
-  ADD_ITEM,
+  ADD_TO_BASKET,
 } from '../actions/basketAction';
 
 const initialState = {
 	numberOfItems: 0
 };
 
-export default function (state = initialState, action, data = {}) {
-
+export default function (state = initialState, action) {
 	switch (action.type) {
-		case ADD_ITEM:
+		case ADD_TO_BASKET:
 			return {
 				...state
-				, loggedIn: 1
-				, shouldRedirect: 1
+				, numberOfItems: state.numberOfItems+1
 			};
 
 	}

@@ -1,10 +1,8 @@
-// There are three possible states for our login
-// process and we need actions for each of them
-export const ADD_ITEM = 'ADD_ITEM'
+export const ADD_TO_BASKET = 'ADD_TO_BASKET';
 
-export function addItem(numberOfItems) {
+export function addItem() {
 	return {
-		type: ADD_ITEM,
-		numberOfItems: numberOfItems+1
+		type: ADD_TO_BASKET,
+		numberOfItems: 1
 	}
 }

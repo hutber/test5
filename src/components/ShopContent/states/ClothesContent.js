@@ -10,7 +10,7 @@ class ClothesContent extends React.Component {
 		return (
 			<div>
 				{
-					this.props.clothes.map((item , index)=> {
+					this.props.clothesAPI.map((item , index)=> {
 						return <ClothingItem details={item} key={`item_${index}`} />;
 					})
 				}
@@ -21,7 +21,7 @@ class ClothesContent extends React.Component {
 
 function matchStateToProps(state){
 	return {
-		clothes: state.clothesAPI.clothes
+		clothesAPI: state.clothesAPI.clothes
 	}
 }
 

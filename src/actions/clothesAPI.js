@@ -10,7 +10,7 @@ export function getClothes() {
 
 export function resolvedGetClothes(data) {
 	return {
-		type: 'FINISHED_CALL',
+		type: FINISHED_CALL,
 		data: data
 	}
 }
