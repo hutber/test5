@@ -10,9 +10,7 @@ class ClothesContent extends React.Component {
 		return (
 			<div>
 				{
-					this.props.clothesAPI.map((item , index)=> {
-						return <ClothingItem details={item} key={`item_${index}`} />;
-					})
+					this.props.clothesAPI.map((item , index)=> <ClothingItem details={item} key={`item_${index}`} />)
 				}
 			</div>
 		);

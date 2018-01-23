@@ -5,10 +5,16 @@ import { bindActionCreators } from 'redux'
 //actions
 import * as menuActions from '../../../actions/menuAction';
 
-//Styles
-import style from '../style.css';
+//selectors
+import getItemSelector from '../../../selectors/getItemSelector';
 
-class ClothesMenuItem extends React.Component {
+//components
+import ClothesMenuItem from './ClothesMenuItem';
+
+//Styles
+import style from './style.css';
+
+class AllClothesMenuItems extends React.Component {
 	constructor (props){
 		super(props);
 
@@ -22,7 +28,7 @@ class ClothesMenuItem extends React.Component {
 	render(){
 		return (
 			<div>
-				<img src=${this.props.details.img} alt=""/>
+				{this.props.currentlySelectedClothes.map(itemDetails => <ClothesMenuItem details={itemDetails} key={`menuItem_${itemDetails.code}`}/>)}
 			</div>
 		);
 	}
@@ -31,7 +37,7 @@ class ClothesMenuItem extends React.Component {
 
 function matchStateToProps(state){
 	return {
-		menuState: state.menu.open,
+		currentlySelectedClothes: getItemSelector(state)
 	}
 }
 
@@ -42,4 +48,4 @@ function matchDispatchToProps(dispatch){
 }
 
 
-export default connect(matchStateToProps, matchDispatchToProps)(ClothesMenuItem);
+export default connect(matchStateToProps, matchDispatchToProps)(AllClothesMenuItems);

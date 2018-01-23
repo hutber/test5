@@ -1,0 +1,51 @@
+@import "../../shared/vars.css";
+
+.menuItem {
+  clear: both;
+  margin-bottom: 10px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+}
+
+.imgContainer {
+  width: 20%;
+  float: left;
+}
+
+.itemContent {
+  float: left;
+  width: 50%
+}
+
+.itemAmounts {
+  width: 30%;
+  float: right;
+
+  > * {
+    display: inline-block;
+  }
+
+  .total {
+    margin: 0 10px;
+  }
+
+  .circle {
+    background: #757575;
+    border-radius: 40px;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+  }
+}
+
+.itemDetails {
+  color: #fff;
+  span {
+    color: #b5b5b5;
+  }
+}

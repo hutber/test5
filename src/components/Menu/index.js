@@ -5,8 +5,8 @@ import { bindActionCreators } from 'redux'
 //actions
 import * as menuActions from '../../actions/menuAction';
 
-//selectors
-import getItemSelector from '../../selectors/getItemSelector';
+//components
+import AllClothesMenuItems from './clothesItems';
 
 //Styles
 import style from './style.css';
@@ -23,6 +23,7 @@ class Menu extends React.Component {
 	}
 
 	render(){
+		console.info(AllClothesMenuItems);
 		return (
 			<div className={this.props.menuState === true ? `${style.menu} ${style.menuOpen}` : style.menu}>
 				<div className={style.nav}>
@@ -33,7 +34,7 @@ class Menu extends React.Component {
 					<h3>My Basket</h3>
 				</div>
 				<div className={style.items}>
-
+					<AllClothesMenuItems />
 				</div>
 			</div>
 		);
@@ -43,8 +44,7 @@ class Menu extends React.Component {
 
 function matchStateToProps(state){
 	return {
-		menuState: state.menu.open,
-		currentlySelectedClothes: getItemSelector(state)
+		menuState: state.menu.open
 	}
 }
 
